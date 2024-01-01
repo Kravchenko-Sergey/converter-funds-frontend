@@ -3,7 +3,7 @@
 import { ReactNode, useState } from 'react'
 import { Flex, HStack, Icon } from '@chakra-ui/react'
 import Sidebar from '@/components/sidebar'
-import { ArrowLeftIcon, ArrowRightIcon, AtSignIcon } from '@chakra-ui/icons'
+import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
 
 export default function Layout({ children }: { children: ReactNode }) {
 	const [collapse, setCollapse] = useState(true)
@@ -22,7 +22,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 					transition='ease-in-out .2s'
 				></Flex>
 			</HStack>
-			<HStack as='main' w='full' h='100vh'>
+			<HStack as='main' w='full' h='100vh' gap={0}>
 				<Flex
 					as='aside'
 					w={collapse ? 234 : 20}
@@ -52,7 +52,9 @@ export default function Layout({ children }: { children: ReactNode }) {
 					</Flex>
 					<Sidebar collapse={collapse} />
 				</Flex>
-				<Flex as='article'>{children}</Flex>
+				<Flex as='article' w='full' h='100vh' pr={4} pl={4}>
+					{children}
+				</Flex>
 			</HStack>
 		</HStack>
 	)

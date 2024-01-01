@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { HStack } from '@chakra-ui/react'
+import { Stat, StatArrow, StatGroup, StatHelpText, StatLabel, StatNumber, Tooltip } from '@chakra-ui/react'
+import { IoMdInformationCircleOutline } from 'react-icons/io'
 
 export const metadata: Metadata = {
 	title: 'Portfolio',
@@ -8,8 +9,78 @@ export const metadata: Metadata = {
 
 export default function Portfolio() {
 	return (
-		<div style={{ backgroundColor: 'red' }}>
-			<HStack bgColor='#040427'>red</HStack>
+		<div style={{ width: '100%', height: '100%', padding: '16px' }}>
+			<StatGroup w='full' h='fit-content' p={4} bgColor='#040427' color='white'>
+				<Stat minW={138} pl={4}>
+					<StatLabel display='flex' alignItems='center' gap={1}>
+						<p>Price</p>
+						<Tooltip
+							p={2}
+							bgColor='white'
+							color='gray.700'
+							fontSize={12}
+							label='Hover me hgh gfh ghg hfgh gh g hgfhgfhgfh gfhfghf ghgfhfdhdg hghgfhhgfhg hhhg hh ghgfhgfhhgfhg h hgfhghh hh hghghh hhgfh hh ghgfghgh hg hhfghf h dfhhfg'
+						>
+							<IoMdInformationCircleOutline />
+						</Tooltip>
+					</StatLabel>
+					<StatNumber>157 876.99</StatNumber>
+					<StatHelpText>1747.20 $</StatHelpText>
+				</Stat>
+				<Stat minW={138} pl={4}>
+					<StatLabel display='flex' alignItems='center' gap={1}>
+						<p>Total profit</p>
+						<Tooltip
+							p={2}
+							bgColor='white'
+							color='gray.700'
+							fontSize={12}
+							label='Hover me hgh gfh ghg hfgh gh g hgfhgfhgfh gfhfghf ghgfhfdhdg hghgfhhgfhg hhhg hh ghgfhgfhhgfhg h hgfhghh hh hghghh hhgfh hh ghgfghgh hg hhfghf h dfhhfg'
+						>
+							<IoMdInformationCircleOutline />
+						</Tooltip>
+					</StatLabel>
+					<StatNumber>34 116.68</StatNumber>
+					<StatHelpText>
+						<StatArrow type='increase' />
+						27.57 %
+					</StatHelpText>
+				</Stat>
+				<Stat minW={138} pl={4}>
+					<StatLabel display='flex' alignItems='center' gap={1}>
+						<p>Profitability</p>
+						<Tooltip
+							p={2}
+							bgColor='white'
+							color='gray.700'
+							fontSize={12}
+							label='Hover me hgh gfh ghg hfgh gh g hgfhgfhgfh gfhfghf ghgfhfdhdg hghgfhhgfhg hhhg hh ghgfhgfhhgfhg h hgfhghh hh hghghh hhgfh hh ghgfghgh hg hhfghf h dfhhfg'
+						>
+							<IoMdInformationCircleOutline />
+						</Tooltip>
+					</StatLabel>
+					<StatNumber>27.57 %</StatNumber>
+				</Stat>
+				<Stat minW={138} pl={4}>
+					<StatLabel display='flex' alignItems='center' gap={1}>
+						<p>Change per day</p>
+						<Tooltip
+							p={2}
+							bgColor='white'
+							color='gray.700'
+							fontSize={12}
+							label='Hover me hgh gfh ghg hfgh gh g hgfhgfhgfh gfhfghf ghgfhfdhdg hghgfhhgfhg hhhg hh ghgfhgfhhgfhg h hgfhghh hh hghghh hhgfh hh ghgfghgh hg hhfghf h dfhhfg'
+						>
+							<IoMdInformationCircleOutline />
+						</Tooltip>
+					</StatLabel>
+					<StatNumber>1310,37</StatNumber>
+					<StatHelpText>
+						<StatArrow type='decrease' />
+						0.83 %
+					</StatHelpText>
+				</Stat>
+			</StatGroup>
 		</div>
 	)
 }
