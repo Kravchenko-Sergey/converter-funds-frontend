@@ -6,7 +6,7 @@ type Item = {
 	type: string
 	title: string
 	icon: IconType
-	path: string
+	path?: string
 }
 
 type NavItemProps = {
@@ -28,7 +28,7 @@ export default function NavItem({ item, collapse }: NavItemProps) {
 					alignItems='center'
 					fontWeight='medium'
 					w='full'
-					color={pathname === path ? 'gray.800' : 'gray.400'}
+					color={pathname === path ? '#040427' : 'gray.400'}
 					_hover={{ textDecoration: 'none', color: 'gray.600' }}
 					justifyContent={!collapse ? 'center' : ''}
 				>

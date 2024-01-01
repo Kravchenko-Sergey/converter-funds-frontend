@@ -2,7 +2,10 @@ import { List, ListItem } from '@chakra-ui/react'
 import NavItem from '@/components/navigation/nav-item'
 import { FaBriefcase } from 'react-icons/fa6'
 import { BsPieChartFill } from 'react-icons/bs'
+import { FaClipboardList } from 'react-icons/fa'
+import { FaLifeRing } from 'react-icons/fa'
 import { FaUserCircle } from 'react-icons/fa'
+import { FaBell } from 'react-icons/fa'
 import { RiLogoutBoxRFill } from 'react-icons/ri'
 
 type NavigationProps = {
@@ -25,9 +28,26 @@ export default function Navigation({ collapse }: NavigationProps) {
 		},
 		{
 			type: 'link',
+			title: 'Transactions',
+			icon: FaClipboardList,
+			path: '/transactions'
+		},
+		{
+			type: 'link',
+			title: 'Help',
+			icon: FaLifeRing,
+			path: '/help'
+		},
+		{
+			type: 'link',
 			title: 'Profile',
 			icon: FaUserCircle,
 			path: '/profile'
+		},
+		{
+			type: 'link',
+			title: 'Updates',
+			icon: FaBell
 		},
 		{
 			type: 'link',

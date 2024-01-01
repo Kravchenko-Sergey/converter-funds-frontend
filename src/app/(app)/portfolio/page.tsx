@@ -12,11 +12,11 @@ import { Table1 } from '@/components/table/table'
 
 const columns: any = [
 	{
-		header: 'name',
-		accessorKey: 'name',
+		header: 'title',
+		accessorKey: 'title',
 		sortable: true,
 		cell: ({ row }: { row: any }) => {
-			return <div>{row.original.name}</div>
+			return <div>{row.original.title}</div>
 		}
 	},
 	{
@@ -82,7 +82,7 @@ export default function Portfolio() {
 		{
 			id: 11,
 			name: 'voo',
-			title: 'Vanguard 500 Index Fund',
+			title: 'S&P 500 ETF',
 			ticker: 'VOO',
 			quantity: 4,
 			averagePrice: 30940.08,
@@ -95,7 +95,7 @@ export default function Portfolio() {
 		{
 			id: 12,
 			name: 'spdw',
-			title: 'spdw Index Fund',
+			title: 'Portfolio Developed World ex-US ETF',
 			ticker: 'SPDW',
 			quantity: 44,
 			averagePrice: 2970.32,
@@ -108,7 +108,7 @@ export default function Portfolio() {
 		{
 			id: 13,
 			name: 'iemg',
-			title: 'iemg Index Fund',
+			title: 'iShares Core MSCI Emerging Markets ETF',
 			ticker: 'IEMG',
 			quantity: 27,
 			averagePrice: 4478.22,
