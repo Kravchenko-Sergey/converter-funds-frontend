@@ -3,6 +3,7 @@ import NavItem from '@/components/navigation/nav-item'
 import { FaBriefcase } from 'react-icons/fa6'
 import { BsPieChartFill } from 'react-icons/bs'
 import { FaUserCircle } from 'react-icons/fa'
+import { RiLogoutBoxRFill } from 'react-icons/ri'
 
 type NavigationProps = {
 	collapse: boolean
@@ -27,6 +28,12 @@ export default function Navigation({ collapse }: NavigationProps) {
 			title: 'Profile',
 			icon: FaUserCircle,
 			path: '/profile'
+		},
+		{
+			type: 'link',
+			title: 'Logout',
+			icon: RiLogoutBoxRFill,
+			path: '/'
 		}
 	]
 
