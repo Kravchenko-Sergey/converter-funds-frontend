@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Card, Heading, Text } from '@chakra-ui/react'
 
 export const metadata: Metadata = {
 	title: 'Help',
@@ -6,5 +7,23 @@ export const metadata: Metadata = {
 }
 
 export default function Help() {
-	return <main>Help</main>
+	return (
+		<main style={{ width: '100%' }}>
+			<Heading as='h1' size='md' mt={4} mb={4}>
+				Help on service operation
+			</Heading>
+			<Card w='full' p={4}>
+				<Text>About the service</Text>
+			</Card>
+			<Heading as='h2' size='md' mt={4} mb={4} ml={4}>
+				About the service
+			</Heading>
+			<Card w='full' p={4}>
+				<Text maxW={400}>
+					The service allows you to account for stocks, bonds, ETFs, currencies and other types of assets. Provides
+					information and evaluation of your investment performance and helps you make informed investment decisions.
+				</Text>
+			</Card>
+		</main>
+	)
 }

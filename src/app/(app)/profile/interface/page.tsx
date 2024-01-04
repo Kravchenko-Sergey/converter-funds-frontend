@@ -7,6 +7,7 @@ import {
 	Card,
 	CardBody,
 	Heading,
+	Icon,
 	Stack,
 	StackDivider,
 	Text,
@@ -15,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { useRouter } from 'next/navigation'
 import { FaMoon } from 'react-icons/fa'
-import { FaLightbulb } from 'react-icons/fa6'
+import { FaArrowLeft, FaLightbulb } from 'react-icons/fa6'
 import { FaGear } from 'react-icons/fa6'
 
 /*export const metadata: Metadata = {
@@ -32,7 +33,16 @@ export default function Interface() {
 
 	return (
 		<main style={{ marginTop: '16px' }}>
-			<Heading as='h2' size='md' mb={4} onClick={() => router.push('/profile')}>
+			<Heading
+				as='h1'
+				size='md'
+				mb={4}
+				display='flex'
+				alignItems='center'
+				gap={2}
+				onClick={() => router.push('/profile')}
+			>
+				<Icon as={FaArrowLeft} w={5} h={5} />
 				Interface settings
 			</Heading>
 			<Card p={6}>

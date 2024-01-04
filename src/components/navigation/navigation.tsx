@@ -15,42 +15,35 @@ type NavigationProps = {
 export default function Navigation({ collapse }: NavigationProps) {
 	const items = [
 		{
-			type: 'link',
 			title: 'Portfolio',
 			icon: FaBriefcase,
 			path: '/portfolio'
 		},
 		{
-			type: 'link',
 			title: 'Analytics',
 			icon: BsPieChartFill,
 			path: '/analytics'
 		},
 		{
-			type: 'link',
 			title: 'Transactions',
 			icon: FaClipboardList,
 			path: '/transactions'
 		},
 		{
-			type: 'link',
 			title: 'Help',
 			icon: FaLifeRing,
 			path: '/help'
 		},
 		{
-			type: 'link',
 			title: 'Profile',
 			icon: FaUserCircle,
 			path: '/profile'
 		},
 		{
-			type: 'link',
 			title: 'Updates',
 			icon: FaBell
 		},
 		{
-			type: 'link',
 			title: 'Logout',
 			icon: RiLogoutBoxRFill,
 			path: '/'

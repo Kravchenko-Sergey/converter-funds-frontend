@@ -1,8 +1,9 @@
 'use client'
 
-import { Box, Card, CardBody, CardHeader, Heading, Stack, StackDivider, Text } from '@chakra-ui/react'
+import { Card, CardBody, CardHeader, Heading, ListItem, Stack, Divider, UnorderedList, Icon } from '@chakra-ui/react'
 import type { Metadata } from 'next'
 import { useRouter } from 'next/navigation'
+import { FaDisplay } from 'react-icons/fa6'
 
 /*export const metadata: Metadata = {
 	title: 'Profile',
@@ -14,20 +15,22 @@ export default function Profile() {
 
 	return (
 		<main style={{ marginTop: '16px' }}>
-			<Heading as='h2' size='md' mb={4}>
+			<Heading as='h1' size='md' mb={4}>
 				Profile
 			</Heading>
 			<Card onClick={() => router.push('/profile/interface')}>
-				<CardHeader>
-					<Heading size='md'>Interface settings</Heading>
+				<CardHeader display='flex' gap={4}>
+					<Icon as={FaDisplay} w={6} h={6} />
+					<Heading size='sm' fontWeight={400}>
+						Interface settings
+					</Heading>
 				</CardHeader>
 				<CardBody pt={0}>
-					<Stack divider={<StackDivider />} spacing='4'>
-						<Box>
-							<Text pt='2' fontSize='sm'>
-								theme selection
-							</Text>
-						</Box>
+					<Stack spacing='4'>
+						<Divider />
+						<UnorderedList>
+							<ListItem>Theme selection</ListItem>
+						</UnorderedList>
 					</Stack>
 				</CardBody>
 			</Card>
